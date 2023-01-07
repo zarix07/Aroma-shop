@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.nav-bar{
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: 222;
+}
+.nav-bar .container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.container .logo{
+    padding: 2.3rem;
+    width: 20%;
+}
+.container .logo img{
+    width: 80%;
+}
+.nav-bar-colapse{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.nav-bar-colapse .navs{
+    display: flex;
+    list-style: none;
+    padding: 2.4rem;
+    width: 45%;
+}
+.nav-bar-colapse .navs .nav-item-active a{
+    color: blue;
+}
+.nav-bar-colapse .navs a{
+    text-decoration: none;
+    color: black;
+    padding: 0 0.6rem;
+}
+.nav-bar-colapse .navs .nav-item-active{
+    margin-right: 28px;
+}
+.nav-bar-colapse .navs .nav-item-submenu{
+    margin-right: 28px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-item-submenu:hover a{
+    color: blue;
+}
+.nav-bar-colapse .navs .nav-item{
+    margin-right: 28px;
+    transition: all 0.3s ease;
+}
+.nav-bar-colapse .navs .nav-item:hover a{
+    color: blue;
+}
+.nav-bar-colapse .drop-down{
+    list-style: none;
+    position: absolute;
+    top: 200%;
+    left: 0px;
+    min-width: 200px;
+    text-align: left;
+    transition: all 300ms ease-in;
+    display: block;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    border: 1px solid white;
+    
+}
+.nav-bar-colapse .drop-down li{
+    border-bottom: 1px solid #ededed;
+}
+.nav-bar-colapse .drop-down li a{
+    line-height: 45px;
+    color: #222;
+    padding: 0px 30px;
+    transition: all 150ms linear;
+    display: block;
+}
+.nav-bar-colapse .drop-down li:hover a{
+    background-color: blue;
+    color: white;
+}
+.nav-item-submenu:hover .drop-down{
+    visibility: visible;
+    opacity: 1;
+    top: 160%;
+}
+.nav-bar-colapse .nav-shop{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    padding: 2rem;
+}
+.nav-bar-colapse .nav-shop .nav-item{
+    position: relative;
+}
+.nav-bar-colapse .nav-shop i{
+    color: black;
+}
+.nav-bar-colapse .nav-shop .nav-circle{
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+}
+.nav-bar-colapse .nav-shop .nav-item{
+    padding: 0.3rem ;
+}
+.nav-bar-colapse .nav-shop .nav-item .btn-header{
+    padding: 0.8rem 3rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 2.5rem;
+    transition: all 0.3s ease;
+    color: black;
+}
+.nav-bar-colapse .nav-shop .nav-item:hover .btn-header{
+    border: 1px solid blue;
+}
+
+.home{
+    background-color: #f1f6f7;
+    height: 100vh;
+    position: relative;
+    top: 12%;
+}
+.home::before{
+    content: "";
+    width: 32%;
+    background-color: #384aeb;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home .items{
+    display: flex;
+    justify-content: space-around;
+}
+.items .item{
+    width: 32%;
+    position: relative;
+    left: 10%;
+    padding-top: 4rem;
+}
+.items .item img{
+    width: 100%;
+    height: 88.5%;
+}
+.items .content{
+    width: 40%;
+    align-self: center;
+}
+.items .content h4{
+    font-size: 30px;
+    font-family: "Roboto",sans-serif;
+    color: #555555;
+    margin-bottom: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.items .content h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.1;
+}
+.items .content p{
+    margin-bottom: 40px;
+    line-height: 1.667;
+    color: #777;
+}
+.items .content a{
+    background-color: #384aeb;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid #384aeb;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    transition: all 0.3s ease;
+}
+.items .content:hover a{
+    background-color: white;
+    color: black;
+}
